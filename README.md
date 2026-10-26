@@ -37,4 +37,9 @@ python -m http.server 8000
 vercel deploy
 ```
 
-`vercel deploy`는 미리보기 배포, `vercel deploy --prod`는 운영 배포다.
+이 저장소는 Vercel 프로젝트 `seungyoon-portfolio`에 연결되어 있어 푸시하면 자동으로 배포된다.
+
+- `main`에 푸시: 운영 배포 (https://seungyoon-portfolio.vercel.app)
+- 다른 브랜치에 푸시하거나 PR을 열면: 미리보기 배포 (PR에 주소가 댓글로 달린다)
+
+CLI로 직접 올릴 때는 `vercel deploy`가 미리보기, `vercel deploy --prod`가 운영 배포다.
