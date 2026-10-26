@@ -27,11 +27,11 @@
     { cat: 'be', index: '02', href: GH + 'safe-waalk/BE', meta: '2026.07 · Team Lead · Backend', title: 'Safe-walk',
       summary: '지도 기반 안전 보행 서비스. CCTV·보안등·안심벨·범죄주의구역을 PostGIS로 설계하고 반경 기반 안전점수 API를 구현했습니다.',
       tags: ['PostGIS', 'PostgreSQL', 'Spring Boot'] },
-    { cat: 'be', index: '03', href: GH + '2026-1-midtone/Backend', meta: '2026.08 · Backend', title: 'ShiftRhythm',
+    { cat: 'be', index: '03', href: GH + '2026-1-midtone/Backend', meta: '2026.08 · Backend', title: 'ShiftMate',
       summary: '교대근무자를 위한 생체리듬 코칭 앱. 근무표 사진을 Google Document AI OCR로 읽어 일정 초안을 자동으로 채웁니다.',
       tags: ['Document AI', 'MySQL', 'Redis'],
       image: '/images/projects/shiftmate-mascot.webp', imageFit: 'contain',
-      imageAlt: 'ShiftRhythm 앱의 마스코트 ShiftMate. 확성기를 든 보라색 고양이 캐릭터.' },
+      imageAlt: 'ShiftMate 캐릭터. 확성기를 든 보라색 고양이.' },
     { cat: 'be', index: '04', href: GH + 'On-root-AI/BE', meta: '2026.05 · Backend', title: 'OnRoot AI',
       summary: 'Q-Net 공공데이터에서 시험 일정을 받아 Gemini API로 맞춤 학습 계획을 만드는 자격증 학습 플래너.',
       tags: ['Gemini API', 'Spring Data JPA', 'MySQL'],
@@ -49,7 +49,7 @@
   var timeline = [
     { period: '2026 — 현재', title: '의약품 추천 모델 재현성 연구', org: '독립연구', body: '7개 트랙으로 모델 재현, 군집별 공정성, DDI 제약을 검증합니다. 구현 전에 가설을 먼저 검증해 방향을 다시 잡기도 했습니다.', current: true },
     { period: '2026.09', title: 'DCC 예선', org: '5인 팀', body: 'Mission 1 신고자 성별 분류를 단독 구현·제출하고, Mission 3 제출 추론 경로와 학습 손실을 개선했습니다.' },
-    { period: '2026.08', title: 'Runify · ShiftRhythm', org: 'Backend', body: '러닝 코스 생성 서버를 전담하고, 근무표 OCR 일정 입력을 구현했습니다.' },
+    { period: '2026.08', title: 'Runify · ShiftMate', org: 'Backend', body: '러닝 코스 생성 서버를 전담하고, 근무표 OCR 일정 입력을 구현했습니다.' },
     { period: '2026.07', title: 'Safe-walk', org: 'Team Lead · 경기도 공공데이터 공모전', body: '공간 데이터 설계와 안전 인프라·점수 API를 맡았습니다.' },
     { period: '2026.03 — 05', title: '멋쟁이사자처럼 14기', org: 'Backend 1팀', body: 'Spring 기반 백엔드 과제를 수행했습니다.' },
     { period: '재학 중', title: '한성대학교 컴퓨터공학부', org: '4학년' }];
