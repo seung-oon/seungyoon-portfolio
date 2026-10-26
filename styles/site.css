@@ -1,0 +1,29 @@
+/* Page layout for the portfolio. Colors, type and motion come from tokens.css and monoline.css. */
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.pp { max-width: 1120px; margin: 0 auto; padding: 0 var(--space-16); }
+.pp-hero { padding: var(--space-24) 0 var(--space-16); }
+.pp-hero h1 { margin: 0 0 var(--space-6); font-size: 56px; line-height: 64px; font-weight: 600; letter-spacing: -.03em; }
+.pp-hero p { margin: 0 0 var(--space-8); max-width: 560px; color: var(--ink-muted); }
+.pp-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+.pp-sec { padding: var(--space-16) 0; border-top: 1px solid var(--line); }
+.pp-filter { margin: var(--space-12) 0 var(--space-8); }
+.pp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8); }
+.pp-grid > .ml-reveal__item { display: grid; }
+.pp-gap { margin-top: var(--space-12); }
+.pp-sec .ml-tl { margin-top: var(--space-12); }
+.pp-stack { display: grid; gap: var(--space-6); margin-top: var(--space-12); }
+.pp-stack__row { display: grid; grid-template-columns: 120px 1fr; gap: var(--space-4); align-items: center; }
+.pp-contact { display: flex; flex-wrap: wrap; gap: var(--space-6); align-items: center; margin-top: var(--space-12); }
+.pp-foot { padding: var(--space-8) 0 var(--space-12); font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted); border-top: 1px solid var(--line); }
+
+@media (max-width: 720px) {
+  .pp { padding: 0 var(--space-6); }
+  .pp-hero { padding: var(--space-16) 0 var(--space-12); }
+  .pp-hero h1 { font-size: 36px; line-height: 44px; }
+  .pp-grid { grid-template-columns: 1fr; }
+  .pp-stack__row { grid-template-columns: 1fr; gap: var(--space-2); }
+  .ml-nav { padding: 0 var(--space-4); }
+  .ml-kbar-trigger > span { display: none; }
+}

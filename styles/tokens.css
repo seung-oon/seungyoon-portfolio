@@ -1,0 +1,61 @@
+/* Monoline — generated from tokens.json by tools/sync-monoline.py */
+:root, [data-theme="light"] {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --surface-sunken: #f1f1ef;
+  --line: #e5e5e2;
+  --line-strong: #8a8a85;
+  --ink: #111214;
+  --ink-muted: #5c5f66;
+  --signal: #0f7b5f;
+  --signal-soft: #e2f3ec;
+  --on-signal: #ffffff;
+  --danger: #b42318;
+  --danger-soft: #fdecea;
+  --link: var(--signal);
+  --shadow-sm: 0 1px 2px #1112140f, 0 1px 3px #11121414;
+  --shadow-lg: 0 2px 4px #1112140a, 0 16px 40px -8px #11121426;
+  --focus-ring: 0 0 0 2px #fafaf9, 0 0 0 4px #0f7b5f;
+}
+[data-theme="dark"] {
+  --bg: #0c0d0e;
+  --surface: #141517;
+  --surface-sunken: #1c1d20;
+  --line: #2a2c30;
+  --line-strong: #6b6f76;
+  --ink: #ededec;
+  --ink-muted: #9da0a6;
+  --signal: #3ddc97;
+  --signal-soft: #0f2b21;
+  --on-signal: #0c0d0e;
+  --danger: #ff8a7a;
+  --danger-soft: #2e1412;
+  --link: var(--signal);
+  --shadow-sm: 0 1px 2px #00000099;
+  --shadow-lg: 0 16px 40px -8px #000000cc;
+  --focus-ring: 0 0 0 2px #0c0d0e, 0 0 0 4px #3ddc97;
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 320ms;
+  --dur-4: 560ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --font-sans: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
