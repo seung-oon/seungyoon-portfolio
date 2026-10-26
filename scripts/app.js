@@ -26,7 +26,9 @@
       imageAlt: 'Runify 측정 문서의 4km 코스 비교. 회색 목표 도형 위에 이전 기준(왼쪽)과 현재 기준(오른쪽)으로 생성한 코스를 겹쳤다.' },
     { cat: 'be', index: '02', href: GH + 'safe-waalk/BE', meta: '2026.07 · Team Lead · Backend', title: 'Safe-walk',
       summary: '지도 기반 안전 보행 서비스. CCTV·보안등·안심벨·범죄주의구역을 PostGIS로 설계하고 반경 기반 안전점수 API를 구현했습니다.',
-      tags: ['PostGIS', 'PostgreSQL', 'Spring Boot'] },
+      tags: ['PostGIS', 'PostgreSQL', 'Spring Boot'],
+      image: '/images/projects/safewalk-radius.webp',
+      imageAlt: 'Safe-walk가 적재한 서울 OSM 보행 도로망 위에 서울시청 좌표를 중심으로 안전점수 집계 반경을 그린 지도. CCTV·범죄주의구역 150m, 보안등·안심벨 100m.' },
     { cat: 'be', index: '03', href: GH + '2026-1-midtone/Backend', meta: '2026.08 · Backend', title: 'ShiftMate',
       summary: '교대근무자를 위한 생체리듬 코칭 앱. 근무표 사진을 Google Document AI OCR로 읽어 일정 초안을 자동으로 채웁니다.',
       tags: ['Document AI', 'MySQL', 'Redis'],
@@ -39,7 +41,9 @@
       imageAlt: 'OnRoot AI 캐릭터. 초록 바탕 위의 새싹 캐릭터.' },
     { cat: 'game', index: '05', href: GH + 'seung-oon/NextPerson', meta: 'Unity 6 · 게임', title: 'NextPerson',
       summary: 'Papers, Please 구조에 금융 규제 판단을 적용한 은행 창구 업무 시뮬레이션 게임.',
-      tags: ['Unity 6', 'C#'] }];
+      tags: ['Unity 6', 'C#'],
+      image: '/images/projects/nextperson-case.webp',
+      imageAlt: 'NextPerson 규칙을 설명하는 일러스트(게임 화면 아님). DSR 67.3%가 규제 한도 40%를 넘어 거절이 정답인 README 사례, 손님당 제한시간 25초, 사원부터 지점장까지의 직급, 불만 5건이면 권고사직.' }];
 
   var stack = [
     { label: 'Backend', items: ['Java', 'Spring Boot', 'MySQL', 'PostgreSQL', 'PostGIS', 'pgRouting', 'Redis', 'Kafka'] },
