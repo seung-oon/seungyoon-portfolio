@@ -1,37 +1,41 @@
 # seungyoon-portfolio
 
-김승윤의 포트폴리오 사이트. Monoline 디자인 시스템으로 만든 정적 사이트로, 빌드 단계 없이 Vercel에 배포한다.
+김승윤의 포트폴리오 사이트. 빌드 단계 없는 정적 사이트(HTML·CSS·작은 스크립트 하나)로, Vercel에 그대로 배포한다.
+
+디자인 방향은 "고정 포스터"다. 첫 화면에서 "검증한 것만 남기는 김승윤"이 자리를 지키는 동안 측정 그림이 옆으로 지나간다.
+회색 바탕(`#d9d9d6`), 검정 글자, 녹색(`#1f5c49`)은 버튼 하나에만 쓰고, 서체는 Pretendard 하나다.
 
 ## 구조
 
 | 경로 | 내용 |
 | --- | --- |
-| `index.html` | 진입점. 테마를 그리기 전에 정하고, 글꼴·스타일·스크립트를 불러온다 |
-| `scripts/app.js` | 페이지 내용(연구·프로젝트·활동·기술·연락)과 조립 |
-| `scripts/monoline.js` | Monoline 컴포넌트 번들 (`window.Monoline`) |
-| `scripts/vendor/` | React 18.3.1 UMD (외부 CDN에 기대지 않도록 저장소에 포함) |
-| `styles/tokens.css` | Monoline 토큰. `tools/sync-monoline.py`가 만든다 |
-| `styles/monoline.css` | Monoline 컴포넌트 스타일 |
-| `styles/site.css` | 페이지 레이아웃 |
+| `index.html` | 페이지 전체 내용. 스크립트 없이도 모든 내용이 보인다 |
+| `styles/site.css` | 토큰(색·글자 크기 다섯 단계·여백)과 레이아웃 |
+| `scripts/site.js` | 등장 효과, 작업 미리보기 교체, "확인한 것" 탭, 현재 섹션 표시 |
+| `images/projects/` | 프로젝트 그림. `dcc-steps`·`safedrug-clusters`는 `tools/figures/charts.py`가 그린다 |
+| `images/seoul/` | Wikimedia Commons에서 받은 한양도성 사진 두 장. 출처는 푸터에 적었다 |
 
 ## 내용 고치기
 
-프로젝트·활동·기술은 `scripts/app.js` 위쪽 배열(`research`, `projects`, `timeline`, `stack`)만 고치면 된다.
+프로젝트는 `index.html`의 `<article class="job">` 하나가 한 항목이다. `data-img`는 데스크톱 오른쪽에 고정되는 그림이다.
 요약은 "무엇을 → 어떻게 → 결과" 두 문장, 결과는 측정한 숫자로 쓴다.
+첫 화면 그림 띠(`.reel`)와 "확인한 것"의 숫자를 바꾸면 GitHub 프로필 README(`seung-oon/seung-oon`)의 카드도 같이 고친다.
 
-## 디자인 시스템 갱신
-
-Monoline 디자인 시스템의 `project/` 폴더를 받아 두고:
+## 그래프 다시 그리기
 
 ```bash
-python tools/sync-monoline.py <design-system>/project
+python tools/figures/charts.py images/projects
 ```
+
+`tools/figures/fonts/`에 Pretendard OTF(Regular·SemiBold·ExtraBold)가 있어야 한다. 출력은 PNG이므로 webp로 바꿔 넣는다.
 
 ## 로컬 실행과 배포
 
 ```bash
 python -m http.server 8000
 ```
+
+이미지·스크립트 경로가 `/`로 시작하므로 파일을 직접 열지 말고 서버로 연다.
 
 ```bash
 vercel deploy
