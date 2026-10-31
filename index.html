@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>김승윤 · 백엔드 개발자 · 의료 AI 재현 연구</title>
-  <meta name="description" content="한성대학교 컴퓨터공학부 4학년 김승윤. 공간 DB와 그래프 탐색으로 백엔드를 만들고, 의료 추천 모델을 재현해 검증합니다.">
+  <title>김승윤 · 백엔드 개발자</title>
+  <meta name="description" content="한성대학교 컴퓨터공학부 4학년 김승윤. Spring Boot와 PostGIS로 지도·경로 서버를 만들고, 의료 추천 모델 재현 연구를 하고 있습니다.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="김승윤 · 검증한 것만 남기는 개발자">
-  <meta property="og:description" content="공간 DB와 그래프 탐색으로 백엔드를 만들고, 의료 추천 모델을 재현해 검증합니다.">
+  <meta property="og:title" content="김승윤 · 백엔드 개발자">
+  <meta property="og:description" content="Spring Boot와 PostGIS로 지도·경로 서버를 만들고, 의료 추천 모델 재현 연구를 하고 있습니다.">
   <meta name="theme-color" content="#d9d9d6">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -23,7 +23,7 @@
     <a class="bar__name" href="#top">김승윤</a>
     <nav class="bar__nav" aria-label="섹션">
       <a href="#work">작업</a>
-      <a href="#checks">확인한 것</a>
+      <a href="#checks">실험 기록</a>
       <a href="#activity">해 온 일</a>
       <a href="#contact">연락</a>
     </nav>
@@ -31,27 +31,28 @@
   </header>
 
   <main>
-    <!-- The sentence holds still while the measured figures pass beside it. -->
+    <!-- The name holds still while the measured figures pass beside it. -->
     <section class="stage" id="top" aria-labelledby="title">
       <div class="stage__pin">
-        <h1 id="title" class="stage__title"><span>검증한 것만</span> <span>남기는 김승윤</span></h1>
-        <p class="stage__lead">백엔드 개발자이자 의료 추천 모델 재현 연구자. 한성대학교 컴퓨터공학부 4학년입니다.</p>
+        <h1 id="title" class="stage__title"><span>김승윤</span> <span>백엔드 개발자</span></h1>
+        <p class="stage__lead">Spring Boot와 PostGIS로 지도·경로 서버를 만들고, 의료 추천 모델 재현 연구를 하고 있습니다.</p>
+        <p class="stage__meta">한성대학교 컴퓨터공학부 4학년</p>
         <a class="btn" href="#work">작업 보기</a>
       </div>
       <ol class="reel" aria-label="측정한 결과">
-        <li class="reel__frame">
+        <li class="reel__frame" data-reveal>
           <img src="/images/projects/runify-course.webp" width="920" height="460" alt="Runify 4km 코스 비교. 회색 목표 도형 위에 이전 기준(왼쪽)과 현재 기준(오른쪽)으로 생성한 코스를 겹쳤다." class="is-contain">
           <p class="reel__cap"><span>Runify · 그린 도형을 실제 러닝 코스로</span><span>강남·서초 8×8km 도보망</span></p>
         </li>
-        <li class="reel__frame">
+        <li class="reel__frame" data-reveal>
           <img src="/images/projects/safewalk-radius.webp" width="1200" height="675" alt="서울 OSM 보행 도로망 위, 서울시청 좌표를 중심으로 안전점수 집계 반경을 그린 지도. CCTV·범죄주의구역 150m, 보안등·안심벨 100m." loading="lazy">
           <p class="reel__cap"><span>Safe-walk · 안전점수 집계 반경</span><span>150m · 100m</span></p>
         </li>
-        <li class="reel__frame">
+        <li class="reel__frame" data-reveal>
           <img src="/images/projects/dcc-steps.webp" width="1600" height="900" alt="DCC 증상 분류 Macro F1@0.5 단계별 계단 그래프. Plain BCE 0.5967에서 pos_weight power 0.5로 0.6496, 제출 0.6599." loading="lazy">
           <p class="reel__cap"><span>DCC 예선 · 증상 분류 F1@0.5</span><span>0.5967 → 0.6599</span></p>
         </li>
-        <li class="reel__frame">
+        <li class="reel__frame" data-reveal>
           <img src="/images/projects/safedrug-clusters.webp" width="1600" height="900" alt="SafeDrug 진단 군집 10개의 보정 Jaccard. 호흡부전·폐렴·패혈증 0.488부터 안면외상·뇌동맥류 0.554까지." loading="lazy">
           <p class="reel__cap"><span>SafeDrug · 군집별 보정 Jaccard</span><span>0.488 – 0.554</span></p>
         </li>
@@ -61,7 +62,7 @@
     <section class="work" id="work" aria-labelledby="work-title">
       <div class="work__list">
         <h2 id="work-title" class="head" data-reveal>작업</h2>
-        <p class="work__intro" data-reveal>연구 둘, 백엔드 넷, 게임 하나. 숫자는 모두 직접 다시 돌려 잰 값입니다.</p>
+        <p class="work__intro" data-reveal>연구 2개, 백엔드 4개, 게임 1개입니다. 수치는 직접 실험해서 얻은 값입니다.</p>
 
         <article class="job" data-reveal data-img="/images/projects/safedrug-clusters.webp" data-alt="SafeDrug 진단 군집 10개의 보정 Jaccard 그래프">
           <h3><a href="https://github.com/seung-oon/drug-recommendation-research" target="_blank" rel="noopener noreferrer">의약품 추천 모델 재현성 연구</a></h3>
@@ -84,7 +85,7 @@
         <article class="job" data-reveal data-img="/images/projects/runify-course.webp" data-alt="Runify 4km 코스의 이전 기준과 현재 기준 비교" data-contain>
           <h3><a href="https://github.com/KozzilzzilE/Running-Sketch-Server" target="_blank" rel="noopener noreferrer">Runify</a></h3>
           <p class="job__meta">코스 생성 서버 전담 · 2026.08</p>
-          <p>그린 도형을 강남·서초 8×8km 도보망 위의 러닝 코스로 바꾸는 계산기하·그래프 탐색 파이프라인입니다. 계단 모양 코스가 더 높게 채점되던 결함을 실측으로 찾아 보정했습니다.</p>
+          <p>그린 도형을 강남·서초 8×8km 도보망 위의 러닝 코스로 바꾸는 계산기하·그래프 탐색 파이프라인입니다. 계단 모양 코스가 더 높은 점수를 받던 채점 오류를 찾아 고쳤습니다.</p>
           <p class="job__fact">Kafka로 요청을 받고 pgRouting으로 경로를 찾습니다</p>
           <p class="job__stack">Spring Boot · Kafka · PostGIS · pgRouting</p>
           <img class="job__img is-contain" src="/images/projects/runify-course.webp" width="920" height="460" alt="Runify 4km 코스의 이전 기준과 현재 기준 비교" loading="lazy">
@@ -130,36 +131,36 @@
     </section>
 
     <section class="checks" id="checks" aria-labelledby="checks-title">
-      <h2 id="checks-title" class="head" data-reveal>확인한 것</h2>
-      <p class="checks__intro" data-reveal>짐작으로 고치기 전에 먼저 잽니다. 그래서 처음 세운 가설이 틀린 적도 있고, 그 기록도 남겨 둡니다.</p>
+      <h2 id="checks-title" class="head" data-reveal>실험 기록</h2>
+      <p class="checks__intro" data-reveal>결과가 예상과 달랐던 실험 세 가지와, 그 뒤에 바꾼 것입니다.</p>
       <!-- Without script every answer shows under its question; with it the questions become tabs. -->
       <div class="checks__tabs" role="tablist" aria-label="질문" hidden>
-        <button type="button" role="tab" id="tab-hidr" aria-controls="ans-hidr" aria-selected="true">HI-DR은 약을 너무 많이 추천해서 사후 필터가 필요할까?</button>
-        <button type="button" role="tab" id="tab-dcc" aria-controls="ans-dcc" aria-selected="false" tabindex="-1">DCC 증상 분류의 F1@0.5는 왜 낮았을까?</button>
-        <button type="button" role="tab" id="tab-ddi" aria-controls="ans-ddi" aria-selected="false" tabindex="-1">SafeDrug의 DDI 페널티는 모든 환자군에 고르게 작동할까?</button>
+        <button type="button" role="tab" id="tab-hidr" aria-controls="ans-hidr" aria-selected="true">HI-DR 과다 추천 가설</button>
+        <button type="button" role="tab" id="tab-dcc" aria-controls="ans-dcc" aria-selected="false" tabindex="-1">DCC 증상 분류 F1 개선</button>
+        <button type="button" role="tab" id="tab-ddi" aria-controls="ans-ddi" aria-selected="false" tabindex="-1">SafeDrug DDI 페널티의 군집별 영향</button>
       </div>
       <div class="check" id="ans-hidr" role="tabpanel" aria-labelledby="tab-hidr">
-        <h3 class="check__q">HI-DR은 약을 너무 많이 추천해서 사후 필터가 필요할까?</h3>
+        <h3 class="check__q">HI-DR 과다 추천 가설</h3>
         <p class="check__num"><span>0.4550</span> → <span>0.5231</span></p>
         <div class="check__say">
-          <p class="check__verdict">가설이 틀렸습니다</p>
-          <p>재 보니 방문당 추천 후보 20.07개, 실제 처방 20.16개로 과다 추천이 아니었습니다. 필터를 붙이는 대신 이력 기반으로 후보 풀을 넓히도록 다시 설계했고, 현재 방문 기준 Jaccard가 위처럼 올랐습니다.</p>
+          <p class="check__verdict">가설과 다른 결과</p>
+          <p>모델이 약을 너무 많이 추천해서 사후 필터가 필요하다고 보고 측정했습니다. 방문당 추천 후보는 20.07개, 실제 처방은 20.16개로 과다 추천이 아니었습니다. 그래서 필터 대신 이력 기반으로 후보 풀을 넓혔고, 현재 방문 기준 Jaccard가 0.4550에서 0.5231로 올랐습니다.</p>
         </div>
       </div>
       <div class="check" id="ans-dcc" role="tabpanel" aria-labelledby="tab-dcc">
-        <h3 class="check__q">DCC 증상 분류의 F1@0.5는 왜 낮았을까?</h3>
+        <h3 class="check__q">DCC 증상 분류 F1 개선</h3>
         <p class="check__num"><span>0.032</span> → <span>0.387</span></p>
         <div class="check__say">
-          <p class="check__verdict">원인을 찾았습니다</p>
-          <p>임계값 0.5에서 드문 증상의 확률이 낮게 나왔고, 오심의 F1은 0.032였습니다. 손실에 pos_weight를 (음성/양성)^0.5로 주자 오심이 0.387로 오르고 아홉 증상이 모두 올라 Macro F1이 0.5967에서 0.6496이 되었습니다.</p>
+          <p class="check__verdict">원인 확인 후 개선</p>
+          <p>임계값 0.5에서 드문 증상의 확률이 낮게 나와, 오심의 F1이 0.032에 그쳤습니다. 손실의 pos_weight를 (음성/양성)^0.5로 조정하자 오심은 0.387로 오르고 아홉 증상 모두 개선되어, Macro F1이 0.5967에서 0.6496이 되었습니다.</p>
         </div>
       </div>
       <div class="check" id="ans-ddi" role="tabpanel" aria-labelledby="tab-ddi">
-        <h3 class="check__q">SafeDrug의 DDI 페널티는 모든 환자군에 고르게 작동할까?</h3>
+        <h3 class="check__q">SafeDrug DDI 페널티의 군집별 영향</h3>
         <p class="check__num"><span>0.030</span> → <span>0.016</span></p>
         <div class="check__say">
-          <p class="check__verdict">고르지 않았습니다</p>
-          <p>페널티를 끄자 군집 사이의 초과 DDI 격차가 0.030에서 0.016으로 줄었습니다. k = 10, 4개 시드에서 모두 같은 방향이었습니다. 페널티가 군집마다 다르게 작동한다는 뜻이라, 다음 트랙에서 원인을 나눠 보고 있습니다.</p>
+          <p class="check__verdict">군집마다 다르게 작동</p>
+          <p>DDI 페널티를 끄자 군집 간 초과 DDI 격차가 0.030에서 0.016으로 줄었습니다(k = 10, 4개 시드 모두 같은 방향). 페널티가 환자군마다 다르게 작동한다는 뜻이어서, 원인을 나눠 분석하고 있습니다.</p>
         </div>
       </div>
     </section>
@@ -170,37 +171,23 @@
         <caption class="sr">활동과 다루는 기술</caption>
         <tbody>
           <tr class="lineup__part"><th colspan="3" scope="colgroup">활동</th></tr>
-          <tr><td>2026 — 현재</td><td>의약품 추천 모델 재현성 연구</td><td>독립연구</td></tr>
-          <tr><td>2026.09</td><td>DCC 예선</td><td>5인 팀</td></tr>
-          <tr><td>2026.08</td><td>Runify · ShiftMate</td><td>Backend</td></tr>
-          <tr><td>2026.07</td><td>Safe-walk</td><td>Team Lead · 공공데이터 공모전</td></tr>
-          <tr><td>2026.03 — 05</td><td>멋쟁이사자처럼 14기</td><td>Backend 1팀</td></tr>
-          <tr><td>재학 중</td><td>한성대학교 컴퓨터공학부</td><td>4학년</td></tr>
+          <tr data-reveal><td>2026 — 현재</td><td>의약품 추천 모델 재현성 연구</td><td>독립연구</td></tr>
+          <tr data-reveal><td>2026.09</td><td>DCC 예선</td><td>5인 팀</td></tr>
+          <tr data-reveal><td>2026.08</td><td>Runify · ShiftMate</td><td>Backend</td></tr>
+          <tr data-reveal><td>2026.07</td><td>Safe-walk</td><td>Team Lead · 공공데이터 공모전</td></tr>
+          <tr data-reveal><td>2026.03 — 05</td><td>멋쟁이사자처럼 14기</td><td>Backend 1팀</td></tr>
+          <tr data-reveal><td>재학 중</td><td>한성대학교 컴퓨터공학부</td><td>4학년</td></tr>
           <tr class="lineup__part"><th colspan="3" scope="colgroup">다루는 기술</th></tr>
-          <tr class="lineup__tech"><td>Backend</td><td colspan="2">Java, Spring Boot, MySQL, PostgreSQL, PostGIS, pgRouting, Redis, Kafka</td></tr>
-          <tr class="lineup__tech"><td>Infra</td><td colspan="2">AWS, GCP, Docker, GitHub Actions</td></tr>
-          <tr class="lineup__tech"><td>AI · ML</td><td colspan="2">Python, PyTorch, LangChain, RAG</td></tr>
+          <tr class="lineup__tech" data-reveal><td>Backend</td><td colspan="2">Java, Spring Boot, MySQL, PostgreSQL, PostGIS, pgRouting, Redis, Kafka</td></tr>
+          <tr class="lineup__tech" data-reveal><td>Infra</td><td colspan="2">AWS, GCP, Docker, GitHub Actions</td></tr>
+          <tr class="lineup__tech" data-reveal><td>AI · ML</td><td colspan="2">Python, PyTorch, LangChain, RAG</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section class="city" aria-labelledby="city-title">
-      <div class="city__pics">
-        <figure class="city__wide">
-          <img src="/images/seoul/downtown-seoul-and-seoul-city-wall.webp" width="1600" height="1067" alt="산등성이를 따라 이어지는 한양도성 성벽과 그 너머 서울 도심, 남산서울타워" loading="lazy">
-        </figure>
-        <figure class="city__close">
-          <img src="/images/seoul/august-2007-seoul-city-wall-7.webp" width="1600" height="1200" alt="햇빛을 받은 한양도성 성벽의 돌과 총안" loading="lazy">
-        </figure>
-      </div>
-      <div class="city__text">
-        <h2 id="city-title" class="head" data-reveal>한성, 서울의 옛 이름</h2>
-        <p data-reveal>한성(漢城)은 조선 시대에 도성 안 서울을 부르던 이름입니다. 제 백엔드 작업도 대부분 서울의 길 위에서 돌아갑니다. Runify는 강남·서초의 도보망을, Safe-walk는 서울시청 주변의 CCTV와 보안등을 다룹니다.</p>
-      </div>
-    </section>
 
     <section class="contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title" class="contact__say" data-reveal>함께 일할 자리나 연구 이야기라면 메일로 연락 주세요.</h2>
+      <h2 id="contact-title" class="contact__say" data-reveal>채용, 협업, 연구 관련 연락은 메일로 부탁드립니다.</h2>
       <a class="contact__mail" href="mailto:rlatmddbs02@gmail.com" data-reveal>rlatmddbs02<wbr>@gmail.com</a>
       <p class="contact__foot"><a href="https://github.com/seung-oon" target="_blank" rel="noopener noreferrer">GitHub</a> <a href="https://www.linkedin.com/in/%EC%8A%B9%EC%9C%A4-%EA%B9%80-87099041a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     </section>
@@ -209,7 +196,7 @@
   <footer class="foot">
     <p class="foot__mark" aria-hidden="true">seungyoon</p>
     <div class="foot__row">
-      <p>© 2026 김승윤 · 사진: <a href="https://commons.wikimedia.org/w/index.php?curid=146030161">“Downtown Seoul and Seoul City Wall”</a>, 서울연구원, CC BY 4.0 · <a href="https://commons.wikimedia.org/w/index.php?curid=147076214">“August 2007, Seoul city wall 7”</a>, Syced, CC0 · Wikimedia Commons</p>
+      <p>© 2026 김승윤</p>
       <a href="#top">맨 위로</a>
     </div>
   </footer>

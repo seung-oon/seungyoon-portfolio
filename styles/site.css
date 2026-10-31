@@ -56,7 +56,8 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 .stage__pin { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-top: 40px; }
 .stage__title { font-size: min(var(--display), 6.6vw); font-weight: 800; line-height: 1.02; letter-spacing: -0.055em; }
 .stage__title span { display: block; white-space: nowrap; }
-.stage__lead { font-size: var(--lead); line-height: 1.4; letter-spacing: -0.02em; max-width: 24ch; margin: 40px 0 32px; }
+.stage__lead { font-size: var(--lead); line-height: 1.4; letter-spacing: -0.02em; max-width: 30ch; margin: 40px 0 32px; }
+.stage__meta { color: var(--muted); font-weight: 600; margin: -16px 0 32px; }
 .reel { list-style: none; padding: calc(50svh - var(--frame) * 0.28125 - 17px) 0; margin: 0; display: grid; gap: 40px; align-content: start; }
 .reel__frame img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--surface); }
 .reel__frame img.is-contain { object-fit: contain; }
@@ -117,16 +118,6 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 .lineup__part th { text-align: left; font-weight: 400; color: var(--accent); padding: 56px 0 12px; }
 .lineup tr:first-child th { padding-top: 0; }
 
-/* City: two found pictures of the city the work runs on. */
-.city { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; padding: var(--gap) var(--margin) 0; }
-.city__pics { display: contents; }
-.city__wide { grid-column: 1 / 8; grid-row: 1 / 3; overflow: hidden; }
-.city__wide img { width: 100%; height: 100%; min-height: 640px; object-fit: cover; object-position: 40% 50%; animation: drift 30s ease-in-out infinite alternate; }
-.city__close { grid-column: 8 / 13; grid-row: 1; }
-.city__close img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.city__text { grid-column: 8 / 13; grid-row: 2; align-self: end; padding-top: 48px; }
-.city__text p { margin-top: 24px; }
-@keyframes drift { from { transform: scale(1.02) translate(0, 0); } to { transform: scale(1.1) translate(-2%, 1%); } }
 
 /* Contact: the page turns dark, the address is the display line. */
 .contact { margin-top: var(--gap); background: var(--field); color: var(--field-ink); padding: 120px var(--margin) 56px; }
@@ -153,7 +144,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
   .stage { display: block; padding: 112px var(--margin) 0; }
   .stage__pin { position: static; height: auto; display: block; padding: 0; }
   .stage__title { font-size: 12vw; line-height: 1.08; }
-  .stage__lead { font-size: var(--body); line-height: 1.6; margin: 24px 0 24px; max-width: none; }
+  .stage__lead { font-size: 1.1875rem; line-height: 1.55; margin: 24px 0 24px; max-width: none; }
   .reel { margin: 48px 0 0; padding: 0; gap: 32px; }
   .reel__cap { flex-direction: column; gap: 2px; }
   .reel__cap span:last-child { text-align: left; color: var(--muted); }
@@ -173,10 +164,6 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
   .lineup td:nth-child(2) { font-size: var(--body); font-weight: 600; color: var(--ink); order: -1; padding: 0; }
   .lineup .lineup__tech td:nth-child(2) { order: 0; }
   .lineup__part th { padding: 40px 0 12px; }
-  .city { display: block; }
-  .city__wide img { min-height: 0; aspect-ratio: 4 / 5; }
-  .city__close { display: none; }
-  .city__text { padding-top: 32px; }
   .contact { padding-top: 80px; }
   .contact__mail { font-size: 11vw; margin-top: 72px; }
   .foot__row { flex-direction: column; }
@@ -185,6 +172,5 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js [data-reveal] { opacity: 1; transform: none; transition: none; }
-  .city__wide img { animation: none; }
   .btn, .work__preview img, .bar__nav a, .job h3 a { transition: none; }
 }
