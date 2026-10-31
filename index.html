@@ -67,7 +67,7 @@
           <h3><a href="https://github.com/seung-oon/drug-recommendation-research" target="_blank" rel="noopener noreferrer">의약품 추천 모델 재현성 연구</a></h3>
           <p class="job__meta">독립연구 · 2026 — 진행 중 · 7개 트랙</p>
           <p>MIMIC-III와 IV로 의약품 추천 모델을 재현하고, 후보 풀 설계와 진단 군집별 성능 격차, 약물 상호작용(DDI) 제약을 검증합니다. 원본 데이터는 공개하지 않고 코드와 집계 결과만 공개합니다.</p>
-          <p class="job__fact">HI-DR Jaccard 0.4550 → 0.5231</p>
+          <p class="job__fact"><span class="job__num">0.4550 → 0.5231</span><span class="job__label">HI-DR Jaccard, 현재 방문 기준</span></p>
           <p class="job__stack">Python · PyTorch · MIMIC-III / IV</p>
           <img class="job__img" src="/images/projects/safedrug-clusters.webp" width="1600" height="900" alt="SafeDrug 진단 군집 10개의 보정 Jaccard 그래프" loading="lazy">
         </article>
@@ -76,7 +76,7 @@
           <h3><a href="https://github.com/KozzilzzilE/DCC_Problem" target="_blank" rel="noopener noreferrer">DCC 예선 · 119 신고 전화 AI</a></h3>
           <p class="job__meta">5인 팀 · 2026.09</p>
           <p>신고자 성별 분류를 혼자 구현해 제출했습니다. 증상 다중 라벨 분류에서는 0.5 임계값에서 드문 증상이 잡히지 않는 원인을 찾아 손실 가중으로 고쳤습니다.</p>
-          <p class="job__fact">성별 정확도 0.9835 · 증상 F1@0.5 0.5967 → 0.6599</p>
+          <p class="job__fact"><span class="job__num">0.5967 → 0.6599</span><span class="job__label">증상 분류 Macro F1@0.5 · 성별 분류 정확도는 0.9835</span></p>
           <p class="job__stack">PyTorch · Transformers · Wav2Vec2 · pytest</p>
           <img class="job__img" src="/images/projects/dcc-steps.webp" width="1600" height="900" alt="DCC 증상 분류 Macro F1@0.5 단계별 그래프" loading="lazy">
         </article>
@@ -85,7 +85,7 @@
           <h3><a href="https://github.com/KozzilzzilE/Running-Sketch-Server" target="_blank" rel="noopener noreferrer">Runify</a></h3>
           <p class="job__meta">코스 생성 서버 전담 · 2026.08</p>
           <p>그린 도형을 강남·서초 8×8km 도보망 위의 러닝 코스로 바꾸는 계산기하·그래프 탐색 파이프라인입니다. 계단 모양 코스가 더 높은 점수를 받던 채점 오류를 찾아 고쳤습니다.</p>
-          <p class="job__fact">Kafka로 요청을 받고 pgRouting으로 경로를 찾습니다</p>
+          <p class="job__fact"><span class="job__num">0.9015 &gt; 0.784</span><span class="job__label">보정 전 계단 코스와 곧은 코스의 점수. 보정 후 재측정 3건 모두 계단 코스를 걸러냄</span></p>
           <p class="job__stack">Spring Boot · Kafka · PostGIS · pgRouting</p>
           <img class="job__img is-contain" src="/images/projects/runify-course.webp" width="920" height="460" alt="Runify 4km 코스의 이전 기준과 현재 기준 비교" loading="lazy">
         </article>
@@ -94,7 +94,7 @@
           <h3><a href="https://github.com/safe-waalk/BE" target="_blank" rel="noopener noreferrer">Safe-walk</a></h3>
           <p class="job__meta">Team Lead · Backend · 2026.07 · 경기도 공공데이터 공모전</p>
           <p>지도 기반 안전 보행 서비스입니다. CCTV, 보안등, 안심벨, 범죄주의구역을 PostGIS로 설계하고 반경 안의 시설을 세어 안전점수를 내는 API를 만들었습니다.</p>
-          <p class="job__fact">CCTV·범죄주의구역 150m, 보안등·안심벨 100m</p>
+          <p class="job__fact"><span class="job__num">150m · 100m</span><span class="job__label">CCTV·범죄주의구역과 보안등·안심벨의 집계 반경</span></p>
           <p class="job__stack">Spring Boot · PostgreSQL · PostGIS</p>
           <img class="job__img" src="/images/projects/safewalk-radius.webp" width="1200" height="675" alt="Safe-walk 안전점수 집계 반경 지도" loading="lazy">
         </article>
@@ -119,6 +119,7 @@
           <h3><a href="https://github.com/seung-oon/NextPerson" target="_blank" rel="noopener noreferrer">NextPerson</a></h3>
           <p class="job__meta">Unity 6 · 게임</p>
           <p>Papers, Please 구조에 금융 규제 판단을 얹은 은행 창구 시뮬레이션 게임입니다. 손님마다 25초 안에 DSR 한도를 따져 승인하거나 거절합니다.</p>
+          <p class="job__fact"><span class="job__num">40% · 25초</span><span class="job__label">DSR 규제 한도와 손님당 제한시간</span></p>
           <p class="job__stack">Unity 6 · C#</p>
           <img class="job__img" src="/images/projects/nextperson-case.webp" width="1200" height="675" alt="NextPerson 규칙 설명 일러스트(게임 화면 아님). DSR 67.3%가 규제 한도 40%를 넘어 거절이 정답인 사례." loading="lazy">
         </article>
@@ -188,12 +189,12 @@
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title" class="contact__say" data-reveal>채용, 협업, 연구 관련 연락은 메일로 부탁드립니다.</h2>
       <a class="contact__mail" href="mailto:rlatmddbs02@gmail.com" data-reveal>rlatmddbs02<wbr>@gmail.com</a>
-      <p class="contact__foot"><a href="https://github.com/seung-oon" target="_blank" rel="noopener noreferrer">GitHub</a> <a href="https://www.linkedin.com/in/%EC%8A%B9%EC%9C%A4-%EA%B9%80-87099041a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      <p class="contact__foot"><button type="button" class="contact__copy" data-copy="rlatmddbs02@gmail.com" hidden>주소 복사</button> <a href="https://github.com/seung-oon" target="_blank" rel="noopener noreferrer">GitHub</a> <a href="https://www.linkedin.com/in/%EC%8A%B9%EC%9C%A4-%EA%B9%80-87099041a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     </section>
   </main>
 
   <footer class="foot">
-    <p class="foot__mark" aria-hidden="true">seungyoon</p>
+    <p class="foot__mark" aria-hidden="true">Seungyoon Kim</p>
     <div class="foot__row">
       <p>© 2026 김승윤</p>
       <a href="#top">맨 위로</a>

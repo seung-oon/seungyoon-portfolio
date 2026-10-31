@@ -76,6 +76,18 @@
     pick(tabs[0]);
   }
 
+  // Contact: copy the address in one press; the label says when it worked.
+  var copy = document.querySelector('.contact__copy');
+  if (copy && navigator.clipboard) {
+    copy.hidden = false;
+    copy.addEventListener('click', function () {
+      navigator.clipboard.writeText(copy.getAttribute('data-copy')).then(function () {
+        copy.textContent = '복사했습니다';
+        setTimeout(function () { copy.textContent = '주소 복사'; }, 2000);
+      });
+    });
+  }
+
   // The bar marks the section being read.
   var links = Array.prototype.slice.call(document.querySelectorAll('.bar__nav a'));
   var spy = new IntersectionObserver(function (entries) {

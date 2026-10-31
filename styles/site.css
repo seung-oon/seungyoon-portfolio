@@ -57,7 +57,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 .stage__title span { display: block; white-space: nowrap; }
 .stage__lead { font-size: var(--lead); line-height: 1.4; letter-spacing: -0.02em; max-width: 30ch; margin: 40px 0 32px; }
 .stage__meta { color: var(--muted); font-weight: 600; margin: -16px 0 32px; }
-.reel { list-style: none; padding: calc(50svh - var(--frame) * 0.28125 - 17px) 0; margin: 0; display: grid; gap: 40px; align-content: start; }
+.reel { list-style: none; padding: calc(50svh - var(--frame) * 0.28125 - 17px) 0 12svh; margin: 0; display: grid; gap: 40px; align-content: start; }
 .reel__frame img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--surface); }
 .reel__frame img.is-contain { object-fit: contain; }
 .reel__cap { display: flex; justify-content: space-between; gap: 16px; padding-top: 10px; font-size: var(--small); font-weight: 600; min-height: 24px; }
@@ -73,7 +73,9 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 .job h3 a:hover, .job h3 a:focus-visible { text-decoration-color: currentColor; }
 .job__meta { font-size: var(--small); color: var(--muted); margin: 6px 0 14px; font-weight: 600; }
 .job p + p { margin-top: 10px; }
-.job__fact { font-weight: 700; font-variant-numeric: tabular-nums; }
+.job__fact { margin: 20px 0 16px !important; }
+.job__num { display: block; font-size: var(--head); font-weight: 800; line-height: 1; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.job__label { display: block; margin-top: 10px; font-size: var(--small); font-weight: 600; color: var(--muted); }
 .job__stack { color: var(--muted); }
 .job__img { margin-top: 20px; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--surface); }
 .job__img.is-contain { object-fit: contain; padding: 4%; }
@@ -84,7 +86,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 .work__preview img.is-swapping { opacity: 0; }
 .js .work .job__img { display: none; }
 .js .work .job { transition: color 240ms var(--ease); }
-.js .work .job:not(.is-current) h3, .js .work .job:not(.is-current) .job__fact { color: var(--muted); }
+.js .work .job:not(.is-current) h3, .js .work .job:not(.is-current) .job__num { color: #77777b; }
 
 /* Checks: one question per poster line; the answer opens beneath it. */
 .checks { padding: var(--gap) var(--margin) 0; }
@@ -121,13 +123,16 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 /* Contact: the page turns dark, the address is the display line. */
 .contact { margin-top: var(--gap); background: var(--field); color: var(--field-ink); padding: 120px var(--margin) 56px; }
 .contact__say { font-size: var(--lead); font-weight: 600; line-height: 1.35; letter-spacing: -0.02em; max-width: 24ch; }
-.contact__mail { display: block; margin-top: clamp(96px, 14vw, 200px); font-size: var(--display); font-weight: 700; line-height: 1; letter-spacing: -0.05em; text-decoration: none; overflow-wrap: anywhere; transition: color 200ms var(--ease); }
+.contact__mail { display: block; margin-top: clamp(56px, 7vw, 112px); font-size: var(--display); font-weight: 700; line-height: 1; letter-spacing: -0.05em; text-decoration: none; overflow-wrap: anywhere; transition: color 200ms var(--ease); }
 .contact__mail:hover, .contact__mail:focus-visible { color: #8fd3b6; }
 .contact__foot { margin-top: 40px; font-size: var(--lead); font-weight: 600; letter-spacing: -0.02em; }
 .contact__foot a { color: var(--field-ink); margin-right: 32px; }
+.contact__copy { font: inherit; font-size: var(--small); font-weight: 600; color: var(--field); background: var(--field-ink); border: 0; border-radius: 0; min-height: 44px; padding: 0 18px; margin-right: 32px; vertical-align: middle; cursor: pointer; transition: background-color 200ms var(--ease), transform 160ms var(--ease); }
+.contact__copy:hover { background: #ffffff; }
+.contact__copy:active { transform: scale(0.97); }
 
 .foot { background: var(--field); color: var(--field-ink); padding: 0 var(--margin) 32px; }
-.foot__mark { font-size: 19.6vw; font-weight: 800; line-height: 0.9; letter-spacing: -0.065em; padding-top: 48px; margin-left: -0.04em; white-space: nowrap; }
+.foot__mark { font-size: 14.2vw; font-weight: 800; line-height: 0.9; letter-spacing: -0.065em; padding-top: 48px; margin-left: -0.04em; white-space: nowrap; }
 .foot__row { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-top: 48px; font-size: var(--small); color: var(--field-muted); }
 .foot__row a { color: var(--field-ink); }
 
@@ -151,7 +156,8 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
   .work__preview { display: none; }
   .js .work .job__img { display: block; }
   .work .job:nth-of-type(-n+4) .job__img { display: none !important; }
-  .js .work .job:not(.is-current) h3, .js .work .job:not(.is-current) .job__fact { color: inherit; }
+  .js .work .job:not(.is-current) h3, .js .work .job:not(.is-current) .job__num { color: inherit; }
+  .job__num { white-space: normal; }
   .job { padding: 28px 0 32px; }
   .checks__tabs { grid-template-columns: 1fr; }
   .checks__tabs button { min-height: 0; padding: 18px 20px; }
